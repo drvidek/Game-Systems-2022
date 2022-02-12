@@ -18,7 +18,7 @@ public class MouseLook : MonoBehaviour
 
     [Header("Sensitivity")]
     [Range(0, 500)]
-    public float sensitivity = 100f;
+    public float sensitivity = 300f;
     [Header("Rotation Clamp")]
     public float minY = -60f;
     public float maxY = 60f;
