@@ -83,7 +83,7 @@ public class PlayerMovementTest : MonoBehaviour
                             moveDir = transform.TransformDirection(moveDir);
                             slideDir = moveDir;
                             finalSpeed = slidespeed;
-                            
+
                         }
 
                         //multiply moveDir by speed
@@ -96,23 +96,28 @@ public class PlayerMovementTest : MonoBehaviour
                             moveDir.y += jumpspeed;
 
                         }
-                        
-                        
+
+
                     }
                 }
                 break;
             case eState.slide:
                 {
+                    //set slide speed
                     float finalSpeed = slidespeed;
-                    if (slideDecay)
+                    if (slideDecay) //check slideDecay to determine friction on or off
                         finalSpeed = slidespeed - ((slidespeed * 0.75f) * (slideTimer / slideTimerMax));
 
+                    //set moveDir to the direction of the slide and multiply by slide speed
                     moveDir = slideDir * finalSpeed;
 
+                    //set the camera bob
                     camPos.y = transform.position.y - 0.5f;
 
+                    //increase timer for sliding
                     slideTimer += 1 * Time.deltaTime;
 
+                    //check if slide is done
                     if (slideTimer >= slideTimerMax)
                     {
                         state = eState.walk;
