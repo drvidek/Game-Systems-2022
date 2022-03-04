@@ -16,7 +16,7 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Screen.width != scr.x)
+        if (Screen.width/16 != scr.x)
         {
             scr.x = Screen.width / 16;
             scr.y = Screen.height / 9;

@@ -53,16 +53,7 @@ public class Interact : MonoBehaviour
 
     private void OnGUI()
     {
-        //GUI.Box(new Rect(0, 0, 0, 0),"text");
-
-        for (int x = 0; x < 16; x++)
-        {
-            for (int y = 0; y < 9; y++)
-            {
-                GUI.Box(new Rect(GameManager.scr.x * x, GameManager.scr.y * y, GameManager.scr.x, GameManager.scr.y), x+":"+y);
-            }
-        }
         //GUI.Box(new Rect(GameManager.scr.x * 16/2, GameManager.scr.y * 9/2, GameManager.scr.x * 0.25f, GameManager.scr.y * 0.25f), "");
-        GUI.Box(new Rect(Screen.width/2 - (GameManager.scr.x * 0.25f)/2, Screen.height / 2 - (GameManager.scr.x * 0.25f) / 2, GameManager.scr.x * 0.25f, GameManager.scr.y * 0.25f), "+");
+        GUI.Box(new Rect(Screen.width/2 - (GameManager.scr.x * 0.2f)/2, Screen.height / 2 - (GameManager.scr.x * 0.2f) / 2, GameManager.scr.x * 0.2f, GameManager.scr.y * 0.2f), " " );
     }
 }
