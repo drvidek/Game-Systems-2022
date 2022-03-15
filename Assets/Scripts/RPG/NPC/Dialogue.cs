@@ -4,7 +4,9 @@ using UnityEngine;
 
 public class Dialogue : MonoBehaviour
 {
+    [Header("Display dialogue")]
     public string[] text;
+    [Header("Index Markers")]
     public int index;
     public bool showDlg;
 
@@ -22,7 +24,7 @@ public class Dialogue : MonoBehaviour
             {
                 //button to continue the dialogue
                 //on bottom right, half the size of a grid square
-                if (GUI.Button(new Rect(GameManager.scr.x * 15, GameManager.scr.y * 8.5f, GameManager.scr.x, GameManager.scr.y/2), "Next"))
+                if (GUI.Button(new Rect(GameManager.scr.x * 15, GameManager.scr.y * 8.5f, GameManager.scr.x, GameManager.scr.y / 2), "Next"))
                 {
                     index++;
                 }
@@ -35,6 +37,7 @@ public class Dialogue : MonoBehaviour
                 {
                     index = 0;
                     showDlg = false;
+                    GameManager.gamePlayState = GamePlayStates.Game;
                 }
             }
 

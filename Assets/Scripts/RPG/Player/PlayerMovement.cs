@@ -30,29 +30,32 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //if our character is grounded
-        if (charCon.isGrounded)
+        if (GameManager.gamePlayState == GamePlayStates.Game)
         {
-            //set moveDir to movement direction
-            moveDir = new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical"));
-            //moveDir is set to the relative player direction
-            moveDir = transform.TransformDirection(moveDir);
-            //multiply moveDir by speed
-            moveDir *= speed;
-            //if jump is pressed, jump
-            if (Input.GetButton("Jump"))
+            //if our character is grounded
+            if (charCon.isGrounded)
             {
-                //moveDir.y should equal jump keys
-                moveDir.y += jumpspeed;
+                //set moveDir to movement direction
+                moveDir = new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical"));
+                //moveDir is set to the relative player direction
+                moveDir = transform.TransformDirection(moveDir);
+                //multiply moveDir by speed
+                moveDir *= speed;
+                //if jump is pressed, jump
+                if (Input.GetButton("Jump"))
+                {
+                    //moveDir.y should equal jump keys
+                    moveDir.y += jumpspeed;
+
+                }
 
             }
 
+            //no matter what
+            //gravity
+            moveDir.y -= gravity * Time.deltaTime;
+
+            charCon.Move(moveDir * Time.deltaTime);
         }
-
-        //no matter what
-        //gravity
-        moveDir.y -= gravity * Time.deltaTime;
-
-        charCon.Move(moveDir * Time.deltaTime);
     }
 }

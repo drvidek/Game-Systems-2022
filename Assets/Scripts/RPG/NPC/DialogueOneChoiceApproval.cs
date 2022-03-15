@@ -2,20 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class DialogueOneChoiceApproval : MonoBehaviour
+public class DialogueOneChoiceApproval : DialogueOneChoice
 {
-    [Header("Display dialogue")]
-    public string[] text;
-
-    [Header("Index Markers")]
-    public int index;
-    public int choiceIndex;
 
     [Header("How much the NPC likes us")]
     public int approval;
-
-    [Header("Is the dialogue showing currently")]
-    public bool showDlg;
 
     [Header("The Dialogue based on approval")]
     public string[] likeText;
@@ -63,15 +54,11 @@ public class DialogueOneChoiceApproval : MonoBehaviour
                 {
                     index++;
                     approval++;
-                    if (approval > 1)
-                        approval = 1;
                 }
                 if (GUI.Button(new Rect(GameManager.scr.x * 15, GameManager.scr.y * 8.5f, GameManager.scr.x, GameManager.scr.y / 2), "No"))
                 {
                     index = text.Length - 1;
                     approval--;
-                    if (approval < -1)
-                        approval = -1;
                 }
 
             }
@@ -82,8 +69,11 @@ public class DialogueOneChoiceApproval : MonoBehaviour
                 {
                     index = 0;
                     showDlg = false;
+                    GameManager.gamePlayState = GamePlayStates.Game;
                 }
             }
+
+            approval = Mathf.Clamp(approval, -1, 1);
 
             if (approval != approvalOld)
             {
@@ -96,7 +86,7 @@ public class DialogueOneChoiceApproval : MonoBehaviour
                 if (approval == 1)
                     text = likeText;
             }
-
+            
         }
     }
 }

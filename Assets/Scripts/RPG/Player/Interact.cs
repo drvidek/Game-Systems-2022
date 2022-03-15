@@ -28,6 +28,12 @@ public class Interact : MonoBehaviour
                 #region NPC
                 if (hitInfo.collider.tag == "NPC")
                 {
+                    if (hitInfo.collider.GetComponent<Dialogue>())
+                    {
+                        hitInfo.collider.GetComponent<Dialogue>().showDlg = true;
+                        GameManager.gamePlayState = GamePlayStates.MenuPause;
+                    }
+
                     Debug.Log("NPC");
                 }
 
@@ -54,6 +60,6 @@ public class Interact : MonoBehaviour
     private void OnGUI()
     {
         //GUI.Box(new Rect(GameManager.scr.x * 16/2, GameManager.scr.y * 9/2, GameManager.scr.x * 0.25f, GameManager.scr.y * 0.25f), "");
-        GUI.Box(new Rect(Screen.width/2 - (GameManager.scr.x * 0.2f)/2, Screen.height / 2 - (GameManager.scr.x * 0.2f) / 2, GameManager.scr.x * 0.2f, GameManager.scr.y * 0.2f), " " );
+        GUI.Box(new Rect(Screen.width / 2 - (GameManager.scr.x * 0.2f) / 2, Screen.height / 2 - (GameManager.scr.x * 0.2f) / 2, GameManager.scr.x * 0.2f, GameManager.scr.y * 0.2f), " ");
     }
 }

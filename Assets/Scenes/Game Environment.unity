@@ -216,7 +216,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &170633397
 GameObject:
@@ -309,7 +309,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 170633397}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8772cbfddc176d941b64606e954d2c8d, type: 3}
   m_Name: 
@@ -393,7 +393,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &699049310
 GameObject:
@@ -490,7 +490,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &699049315
 MonoBehaviour:
@@ -527,7 +527,7 @@ GameObject:
   - component: {fileID: 954976336}
   m_Layer: 0
   m_Name: Dave
-  m_TagString: Untagged
+  m_TagString: NPC
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -551,8 +551,8 @@ MonoBehaviour:
   - Damn, or maybe it was a queen... I don't remember... hmm...
   - Well, on your way then!
   index: 0
-  choiceIndex: 1
   showDlg: 0
+  choiceIndex: 1
 --- !u!136 &954976337
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -628,7 +628,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1101800482
 GameObject:
@@ -672,7 +672,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1101800485
 MonoBehaviour:
@@ -701,7 +701,7 @@ GameObject:
   - component: {fileID: 1539526494}
   m_Layer: 0
   m_Name: Stacey
-  m_TagString: Untagged
+  m_TagString: NPC
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -725,9 +725,9 @@ MonoBehaviour:
   - 
   - 
   index: 0
+  showDlg: 0
   choiceIndex: 1
   approval: 0
-  showDlg: 1
   likeText:
   - Hey, it's you! Welcome back!
   - You're still going to help me, right?
@@ -821,7 +821,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1613016923
 GameObject:
@@ -914,7 +914,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
 --- !u!1 &1647105972
 GameObject:
@@ -1009,7 +1009,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1951304257
 GameObject:
@@ -1027,6 +1027,7 @@ GameObject:
   - component: {fileID: 1951304259}
   - component: {fileID: 1951304258}
   - component: {fileID: 1951304265}
+  - component: {fileID: 1951304266}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -1041,7 +1042,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1951304257}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8772cbfddc176d941b64606e954d2c8d, type: 3}
   m_Name: 
@@ -1162,7 +1163,7 @@ Transform:
   m_Children:
   - {fileID: 170633400}
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1951304265
 MonoBehaviour:
@@ -1176,3 +1177,59 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ba0b010c2a6c2f745818ec71f1bcb008, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1951304266
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1951304257}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 283f0a6b824f79144bc151e6da5510c6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attributes:
+  - name: 
+    curVal: 0
+    maxVal: 0
+    tempVal: 0
+    regenValue: 0
+    display: {fileID: 0}
+  - name: 
+    curVal: 0
+    maxVal: 0
+    tempVal: 0
+    regenValue: 0
+    display: {fileID: 0}
+  - name: 
+    curVal: 0
+    maxVal: 0
+    tempVal: 0
+    regenValue: 0
+    display: {fileID: 0}
+  baseStats:
+  - name: 
+    value: 0
+    modifier: 0
+    tempVal: 0
+  - name: 
+    value: 0
+    modifier: 0
+    tempVal: 0
+  - name: 
+    value: 0
+    modifier: 0
+    tempVal: 0
+  - name: 
+    value: 0
+    modifier: 0
+    tempVal: 0
+  - name: 
+    value: 0
+    modifier: 0
+    tempVal: 0
+  - name: 
+    value: 0
+    modifier: 0
+    tempVal: 0
