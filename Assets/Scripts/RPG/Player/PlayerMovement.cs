@@ -38,6 +38,7 @@ public class PlayerMovement : MonoBehaviour
 
 
             #region Axis Movement
+            /*
             //if our character is grounded
             if (charCon.isGrounded)
             {
@@ -55,11 +56,11 @@ public class PlayerMovement : MonoBehaviour
 
                 }
 
-            }
+            }*/
             #endregion
 
             #region Keybinds Input
-            /*if (charCon.isGrounded)
+            if (charCon.isGrounded)
             {
                 //A ? is a Ternary Conditional Operator
                 //Allows us to evaluate a boolean expression and return results based on which expression is met
@@ -72,7 +73,7 @@ public class PlayerMovement : MonoBehaviour
                 moveDir.x *= speed;
                 moveDir.z *= speed;
                 moveDir.y = Input.GetKey(KeyBinds.keys["Jump"]) ? jumpSpeed : moveDir.y;
-            }*/
+            }
             #endregion
 
             //no matter what

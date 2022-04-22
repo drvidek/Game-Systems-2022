@@ -130,7 +130,7 @@ public class KeyBinds : MonoBehaviour
                 //forget the object we were editing
                 currentKeyButton = null;
             }
-            SaveKeys();
+            //SaveKeys();
 
         }
     }

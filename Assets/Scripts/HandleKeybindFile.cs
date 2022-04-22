@@ -9,7 +9,7 @@ public class HandleKeybindFile
     [MenuItem("Tool/Save/Write File")]
     public static void WriteSaveFile()
     {
-        StreamWriter saveWrite = new StreamWriter(path, true);
+        StreamWriter saveWrite = new StreamWriter(path, false);
 
         foreach (var keyEntry in KeyBinds.keys)
         {
