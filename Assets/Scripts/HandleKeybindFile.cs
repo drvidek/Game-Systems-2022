@@ -5,8 +5,9 @@ using UnityEditor;
 
 public class HandleKeybindFile
 {
-    static string path = "Assets/Resources/Save/Keybinds.txt";
-    [MenuItem("Tool/Save/Write File")]
+    //static string path = "Assets/StreamingAssets/Save/Keybinds.txt";
+    static string path = Path.Combine(Application.streamingAssetsPath, "Options/Keybinds.txt");
+    [MenuItem("Tool/Save/Write File/Keybinds")]
     public static void WriteSaveFile()
     {
         StreamWriter saveWrite = new StreamWriter(path, false);
@@ -19,7 +20,7 @@ public class HandleKeybindFile
         saveWrite.Close();
     }
 
-    [MenuItem("Tool/Save/Read File")]
+    [MenuItem("Tool/Save/Read File/Keybinds")]
     public static void ReadSaveFile()
     {
         StreamReader saveRead = new StreamReader(path);

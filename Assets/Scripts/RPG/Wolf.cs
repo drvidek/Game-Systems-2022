@@ -5,7 +5,7 @@ using UnityEngine;
 public class Wolf : EnemyMovement
 {
     public Material[] wolfSkin = new Material[4];
-    public Renderer renderer;
+    public Renderer rend;
     public override void Start()
     {
         base.Start();
@@ -15,8 +15,8 @@ public class Wolf : EnemyMovement
         baseDamage = baseStats[0].value * 2;
         walkSpeed = baseStats[1].value * 2;
         runSpeed = baseStats[1].value * 3;
-        renderer = GetComponentInChildren<Renderer>();
-        renderer.material = wolfSkin[difficulty-1];
+        rend = GetComponentInChildren<Renderer>();
+        rend.material = wolfSkin[difficulty-1];
     }
     public void BiteAttack()
     {

@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.IO;
 using UnityEngine;
 //you will need to change Scenes
 using UnityEngine.SceneManagement;
@@ -34,6 +35,10 @@ public class CustomisationSet : MonoBehaviour
     [Header("Character Name")]
     //name of our character that the user is making
     public string characterName = "Videk";
+
+    //save path
+    static string path = Path.Combine(Application.streamingAssetsPath, "Character Saves/Character.txt");
+
 
     #endregion
 
@@ -271,12 +276,6 @@ public class CustomisationSet : MonoBehaviour
     }
     #endregion
 
-    #region Save
-    //Function called Save this will allow us to save our indexes to PlayerPrefs
-    //SetInt for SkinIndex, HairIndex, MouthIndex, EyesIndex
-    //SetString CharacterName
-    #endregion
-
     #region OnGUI
     private void OnGUI()
     {
@@ -442,9 +441,22 @@ public class CustomisationSet : MonoBehaviour
         #region Character Name and Save & Play
         //name of our character equals a GUI TextField that holds our character name and limit of characters
         //move down the screen with the int using ++ each grouping of GUI elements are moved using this
-        characterName = GUI.TextField(new Rect(0.25f * GameManager.scr.x, GameManager.scr.y + i * (0.5f * GameManager.scr.y), GameManager.scr.x * 1.5f, GameManager.scr.y * 0.5f), characterName, 12);
+        characterName = GUI.TextField(new Rect(0.25f * GameManager.scr.x, GameManager.scr.y + i * (0.5f * GameManager.scr.y), GameManager.scr.x * 2f, GameManager.scr.y * 0.5f), characterName, 12);
+        i++;
         //GUI Button called Save and Play
         //this button will run the save function and also load into the game level
+        if (GUI.Button(new Rect(0.25f * GameManager.scr.x, GameManager.scr.y + i * (0.5f * GameManager.scr.y), GameManager.scr.x * 2f, GameManager.scr.y * 0.5f), "Start Game"))
+        {
+            HandleCharCustFile.WriteSaveFile(this);
+            SceneManager.LoadScene(2);
+        }
+        i++;
+        //GUI Button called Cancel
+        //this button will return to the main menu and not save the character
+        if (GUI.Button(new Rect(0.25f * GameManager.scr.x, GameManager.scr.y + i * (0.5f * GameManager.scr.y) + (GameManager.scr.y * 0.25f), GameManager.scr.x * 2f, GameManager.scr.y * 0.25f), "Cancel"))
+        {
+            SceneManager.LoadScene(0);
+        }
         #endregion
     }
 
