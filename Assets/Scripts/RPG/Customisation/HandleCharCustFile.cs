@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEditor;
 
-public class HandleCharCustFile : MonoBehaviour
+public class HandleCharCustFile
 {
     static string path = Path.Combine(Application.streamingAssetsPath, "Character Saves/Character.txt");
 
