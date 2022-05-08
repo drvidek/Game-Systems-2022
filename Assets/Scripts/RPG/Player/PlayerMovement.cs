@@ -28,6 +28,9 @@ public class PlayerMovement : MonoBehaviour
     void Start()
     {
         charCon = GetComponent<CharacterController>();
+#if UNITY_EDITOR
+        HandleKeybindFile.ReadSaveFile();
+#endif
     }
 
     // Update is called once per frame

@@ -2,7 +2,7 @@ using UnityEngine;
 
 public static class ItemData
 {
-    public static Item CreateTtem(int _itemId)
+    public static Item CreateItem(int _itemId)
     {
         string _name = "";
         string _desc = "";
@@ -479,7 +479,7 @@ public static class ItemData
             case 500:
                 _name = "Health Potion";
                 _desc = "Restores HP.";
-                _type = ItemTypes.Crafting;
+                _type = ItemTypes.Potion;
                 _value = 20;
                 _icon = "Potions/Health Potion";
                 _prefab = "Potions/Health Potion";
@@ -491,7 +491,7 @@ public static class ItemData
             case 501:
                 _name = "Mana Potion";
                 _desc = "Restores mana.";
-                _type = ItemTypes.Crafting;
+                _type = ItemTypes.Potion;
                 _value = 20;
                 _icon = "Potions/Mana Potion";
                 _prefab = "Potions/Mana Potion";

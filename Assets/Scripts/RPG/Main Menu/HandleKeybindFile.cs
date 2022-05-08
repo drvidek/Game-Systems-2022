@@ -3,7 +3,7 @@ using System.IO;
 using UnityEngine;
 using UnityEditor;
 
-public class HandleKeybindFile
+public static class HandleKeybindFile
 {
     //static string path = "Assets/StreamingAssets/Save/Keybinds.txt";
     static string path = Path.Combine(Application.streamingAssetsPath, "Options/Keybinds.txt");
