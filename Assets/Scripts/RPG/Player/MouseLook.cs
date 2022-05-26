@@ -39,7 +39,7 @@ public class MouseLook : MonoBehaviour
             //set Rigidbody freezeRotation to true
             GetComponent<Rigidbody>().freezeRotation = true;
         }
-
+        
         if (GetComponent<Camera>())
             axis = rotAxis.mouseY;
     }

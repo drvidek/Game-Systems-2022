@@ -1807,8 +1807,8 @@ GameObject:
   - component: {fileID: 1951304259}
   - component: {fileID: 1951304258}
   - component: {fileID: 1951304265}
-  - component: {fileID: 1951304266}
   - component: {fileID: 1951304267}
+  - component: {fileID: 1951304266}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -1971,15 +1971,15 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1951304257}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 283f0a6b824f79144bc151e6da5510c6, type: 3}
+  m_Script: {fileID: 11500000, guid: a5680ed56d4ee714f8063af839b06296, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   attributes:
-  - name: 
-    curValue: 0
-    maxValue: 0
+  - name: Health
+    curValue: 80
+    maxValue: 100
     tempValue: 0
     regenValue: 0
     display: {fileID: 0}
