@@ -7,7 +7,6 @@ public static class HandleCharCustFile
 {
     static string path = Path.Combine(Application.streamingAssetsPath, "Character Saves/Character.txt");
 
-    [MenuItem("Tool/Save/Write File/Character")]
     public static void WriteSaveFile(CustomisationSet set)
     {
         StreamWriter saveWrite = new StreamWriter(path, false);
@@ -23,10 +22,10 @@ public static class HandleCharCustFile
         saveWrite.Close();
     }
 
-    [MenuItem("Tool/Save/Read File/Character")]
     public static void ReadSaveFile(CustomisationGet get)
     {
         StreamReader saveRead = new StreamReader(path);
+
         get.skinIndex = int.Parse(saveRead.ReadLine());
         get.eyesIndex = int.Parse(saveRead.ReadLine());
         get.mouthIndex = int.Parse(saveRead.ReadLine());
